@@ -1,0 +1,39 @@
+{
+  "id": "74d6fce6-14e8-4ea5-9f84-696224dc4627",
+  "name": "KOB_Customization2",
+  "publisher": "KOB_DEV",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id" : "f9870634-c4eb-44d6-bd16-b818b8f2ef0e",
+      "name" : "Ubiz Report and Functions",
+      "publisher" : "Ubiz Solution Co., Ltd.",
+      "version" : "20.3.0.12"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "22.0.0.0",
+  "idRanges": [
+    {
+      "from": 50382,
+      "to": 50389
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "11.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
