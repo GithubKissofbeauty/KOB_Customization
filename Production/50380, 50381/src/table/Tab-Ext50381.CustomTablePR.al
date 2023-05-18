@@ -7,7 +7,7 @@ tableextension 50381 "KOB_Custom_Table_PR" extends "Purchase Header"
             FieldClass = FlowField;
             Editable = false;
             Caption = 'KOB_PR_Created_PO';
-            CalcFormula = Lookup("Purchase Line"."Document No." WHERE("Document No." = field("No.")));
+            CalcFormula = Lookup("Purchase Line"."Document No." WHERE("UBL_Create From PR/PQ No." = field("No.")));
         }
         field(50382; KOB_PR_Created_PO_Status; Boolean)
         {

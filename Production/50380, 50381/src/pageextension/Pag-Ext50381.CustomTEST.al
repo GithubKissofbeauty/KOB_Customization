@@ -4,9 +4,9 @@ pageextension 50381 "KOB_Custom_TEST" extends "UBL_Purch. Requisitions"
     {
         addbefore("Document Date")
         {
-            field(KOB_Created_PO; Rec.KOB_PR_Created_PO_Status)
+            field(KOB_Created_PO; Rec.KOB_PR_Created_PO)
             {
-                Caption = 'KOB_Created_PO';
+                Caption = 'KOB_PO_Display';
                 ApplicationArea = All;
             }
         }
