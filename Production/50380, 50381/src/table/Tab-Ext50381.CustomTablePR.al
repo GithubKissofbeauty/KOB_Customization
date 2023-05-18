@@ -21,7 +21,14 @@ tableextension 50381 "KOB_Custom_Table_PR" extends "Purchase Header"
             FieldClass = FlowField;
             Editable = false;
             Caption = 'KOB_PR_Created_PRC';
-            CalcFormula = Lookup("Purch. Rcpt. Header"."No." WHERE("Order No." = field(KOB_PR_Created_PO)));
+            CalcFormula = Lookup("Purch. Rcpt. Header"."No." WHERE("Order No." = field("KOB_PR_Created_PO")));
+        }
+        field(50384; KOB_Comment; Text[200])
+        {
+            FieldClass = FlowField;
+            Editable = false;
+            Caption = 'KOB_Comment';
+            CalcFormula = Lookup("Purch. Comment Line"."Comment" WHERE("No." = field("No.")));
         }
     }
 }
