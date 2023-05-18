@@ -16,5 +16,12 @@ tableextension 50381 "KOB_Custom_Table_PR" extends "Purchase Header"
             Caption = 'KOB_PR_Created_PO_Status';
             CalcFormula = Exist("Purchase Line" WHERE("Document No." = field("No.")));
         }
+        field(50383; KOB_PR_PRC; Text[50])
+        {
+            FieldClass = FlowField;
+            Editable = false;
+            Caption = 'KOB_PR_Created_PRC';
+            CalcFormula = Lookup("Purch. Rcpt. Header"."No." WHERE("Order No." = field(KOB_PR_Created_PO)));
+        }
     }
 }

@@ -9,6 +9,11 @@ pageextension 50381 "KOB_Custom_TEST" extends "UBL_Purch. Requisitions"
                 Caption = 'KOB_PO_Display';
                 ApplicationArea = All;
             }
+            field(KOB_PR_PRC; Rec.KOB_PR_PRC)
+            {
+                Caption = 'KOB_PRC_Display';
+                ApplicationArea = All;
+            }
         }
     }
 }
