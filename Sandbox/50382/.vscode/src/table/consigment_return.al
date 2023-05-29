@@ -1,4 +1,4 @@
-pageextension 50382 "KOB_Custom_Consign_Return" extends "UBC_Consign Return Order Subf"
+pageextension 50384 "KOB_Custom_Consign_Return" extends "UBC_Consign Return Order Subf"
 {
     layout
     {
