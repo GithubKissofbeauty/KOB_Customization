@@ -1,0 +1,6 @@
+{
+    "CRS.RemovePrefixFromFilename": true,
+    "CRS.ObjectNamePrefix": "KOB_",
+    "CRS.FileNamePattern": "<ObjectTypeShort><ObjectId>.<ObjectNameShort>.al",
+    "CRS.OnSaveAlFileAction": "Rename"
+}
