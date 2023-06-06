@@ -8,7 +8,6 @@ pageextension 50383 "KOB_Custom_Consign_Return" extends "UBC_Consign Return Orde
             {
                 ApplicationArea = All;
             }
-
         }
     }
 }

@@ -487,14 +487,14 @@ report 50384 "KOB_Return Consign Confirm"
                                 TempSalesLine.Find('-')
                             else
                                 TempSalesLine.Next();
-                            "Sales Line" := TempSalesLine;
+                            // "Sales Line" := TempSalesLine;
 
                             if (TempSalesLine.Type = TempSalesLine.Type::"G/L Account") and (not ShowInternalInfo) then begin
                                 SalesLineNo := "Sales Line"."UBC_No.";
                                 "Sales Line"."UBC_No." := '';
                             end;
 
-                            TypeInt := "Sales Line".Type.AsInteger();
+                            // TypeInt := "Sales Line".Type.AsInteger();
                             SalesLineLineNo := "Sales Line"."UBC_Line No.";
                         end;
 
@@ -685,9 +685,9 @@ report 50384 "KOB_Return Consign Confirm"
                     Clear(SalesPost);
                     TempSalesLine.DeleteAll();
                     TempVATAmountLine.DeleteAll();
-                    SalesPost.GetSalesLines("Sales Header", TempSalesLine, 0);
-                    TempSalesLine.CalcVATAmountLines(0, "Sales Header", TempSalesLine, TempVATAmountLine);
-                    TempSalesLine.UpdateVATOnLines(0, "Sales Header", TempSalesLine, TempVATAmountLine);
+                    // SalesPost.GetSalesLines("Sales Header", TempSalesLine, 0);
+                    // TempSalesLine.CalcVATAmountLines(0, "Sales Header", TempSalesLine, TempVATAmountLine);
+                    // TempSalesLine.UpdateVATOnLines(0, "Sales Header", TempSalesLine, TempVATAmountLine);
                     VATAmount := TempVATAmountLine.GetTotalVATAmount();
                     VATBaseAmount := TempVATAmountLine.GetTotalVATBase();
                     VATDiscountAmount :=
@@ -719,8 +719,8 @@ report 50384 "KOB_Return Consign Confirm"
             begin
                 CurrReport.Language := Language.GetLanguageIdOrDefault("UBC_Language Code");
 
-                FormatAddressFields("Sales Header");
-                FormatDocumentFields("Sales Header");
+                // FormatAddressFields("Sales Header");
+                // FormatDocumentFields("Sales Header");
                 if SellToContact.Get("UBC_Sell-to Contact No.") then;
                 if BillToContact.Get("UBC_Bill-to Contact No.") then;
 
@@ -729,7 +729,7 @@ report 50384 "KOB_Return Consign Confirm"
 
             trigger OnPostDataItem()
             begin
-                OnAfterPostDataItem("Sales Header");
+                // OnAfterPostDataItem("Sales Header");
             end;
         }
     }
@@ -806,11 +806,11 @@ report 50384 "KOB_Return Consign Confirm"
                     if "Sales Header"."UBC_Bill-to Contact No." <> '' then
                         SegManagement.LogDocument(18, "Sales Header"."UBC_No.", 0, 0, DATABASE::Contact,
                           "Sales Header"."UBC_Bill-to Contact No.", "Sales Header"."UBC_Salesperson Code",
-                          "Sales Header"."Campaign No.", "Sales Header"."UBC_Posting Description", "Sales Header"."Opportunity No.")
+                          "Sales Header"."KOB_UBC_Campaign No.", "Sales Header"."UBC_Posting Description", "Sales Header"."KOB_UBC_Opportunity No.")
                     else
                         SegManagement.LogDocument(18, "Sales Header"."UBC_No.", 0, 0, DATABASE::Customer,
                           "Sales Header"."UBC_Bill-to Customer No.", "Sales Header"."UBC_Salesperson Code",
-                          "Sales Header"."Campaign No.", "Sales Header"."UBC_Posting Description", "Sales Header"."Opportunity No.");
+                          "Sales Header"."KOB_UBC_Campaign No.", "Sales Header"."UBC_Posting Description", "Sales Header"."KOB_UBC_Opportunity No.");
                 until "Sales Header".Next() = 0;
     end;
 
