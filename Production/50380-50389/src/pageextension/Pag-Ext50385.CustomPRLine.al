@@ -5,20 +5,19 @@ pageextension 50385 "KOB_Custom_PR_Line" extends "UBL_Purch. Requisition Subf"
         modify("UBL_Qty. Made")
         {
             Editable = false;
+            ApplicationArea = All;
         }
-     }
+        addafter("UBL_Qty. Made"){
+            field(KOB_PO_Line_Qty_Ref; Rec.KOB_PO_Line_Qty_Ref)
+            {
+                ApplicationArea = All;
+                Visible = false;
+            }
+        }
+}
 
     trigger OnAfterGetRecord()
     begin
-        Rec."UBL_Qty. Made" := 20;
+        Rec."UBL_Qty. Made" := Rec.KOB_PO_Line_Qty_Ref;
     end;
 }
-
-
-// trigger OnAfterGetRecord()
-// var
-//     PurchaseLine: Record "Purchase Line";
-// begin
-//     if PurchaseLine.Get(Rec."Document Type", Rec."Document No.", Rec."Line No.") then
-//         Rec."UBL_Qty. Made" := Rec.Quantity - PurchaseLine.KOB_field;
-// end;
