@@ -33,6 +33,11 @@ page 50384 "KOB_PR_Per_Line"
                     ApplicationArea = All;
                     Caption = 'PO_Line No.';
                 }
+                field(KOB_PO_Line_Qty; Rec.KOB_PO_Line_Qty_Ref)
+                {
+                    ApplicationArea = All;
+                    Caption = 'PO_Qty.';
+                }
             }
         }
     }
