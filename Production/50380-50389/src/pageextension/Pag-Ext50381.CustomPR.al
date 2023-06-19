@@ -21,4 +21,16 @@ pageextension 50381 "KOB_Custom_PR" extends "UBL_Purch. Requisitions"
             }
         }
     }
+    actions
+    {
+        addafter(Dimensions)
+        {
+            action(KOB_set_diemntion)
+            {
+                Caption = 'Dimention Header';
+                Image = AddAction;
+                ApplicationArea = All;
+            }
+        }
+    }
 }
