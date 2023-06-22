@@ -31,14 +31,22 @@ tableextension 50381 "KOB_Custom_Table_PR" extends "Purchase Header"
             CalcFormula = Lookup("Purch. Comment Line"."Comment" WHERE("No." = field("No.")));
         }
     }
-    trigger OnBeforeDelete()
-    var
-        PurchaseHeaderArchive: Record "Purchase Header Archive";
-    begin
-        PurchaseHeaderArchive.Reset();
-        PurchaseHeaderArchive.SetRange("No.", Rec."No.");
-        if not PurchaseHeaderArchive.FindFirst() then begin
-            Error('No Archive Document.\Please Click Archive Document Before Delete.');
-        end;
+
+trigger OnBeforeDelete()
+var
+    PurchaseHeaderArchive: Record "Purchase Header Archive";
+    ConfirmDelete: Boolean;
+begin
+    ConfirmDelete := Confirm('This Purchase Order(PO) ???', false);
+    if not ConfirmDelete then
+        exit;
+
+    PurchaseHeaderArchive.Reset();
+    PurchaseHeaderArchive.SetRange("No.", Rec."No.");
+    if not PurchaseHeaderArchive.FindFirst() then begin
+        Message('No Archive Document.\Please Click Archive Document Before Delete.');
+        Error('No Archive Document.\Please Click Archive Document Before Delete.');
     end;
+end;
+
 }
