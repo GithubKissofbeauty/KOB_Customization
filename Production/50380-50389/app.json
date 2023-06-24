@@ -18,6 +18,12 @@
       "version" : "22.0.0.1"
     },
     {
+      "id" : "f10cd1be-10b9-4fe1-89d5-bb8d3cc96ab2",
+      "name" : "KOB-Customize Consignment Report",
+      "publisher" : "KOB",
+      "version" : "1.0.0.1"
+    },
+    {
       "id" : "c82dba65-01ad-43d0-be8d-b5fb28446a13",
       "name" : "UBIZ Consignment",
       "publisher" : "Ubiz Solution Co., Ltd.",
