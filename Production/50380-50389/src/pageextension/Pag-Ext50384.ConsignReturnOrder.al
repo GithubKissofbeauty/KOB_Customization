@@ -2,7 +2,7 @@ pageextension 50384 "KOB_Consign_Return_Order" extends "UBC_Consignment Return O
 {
     layout
     {
-
+        //
     }
     actions
     {
