@@ -4,55 +4,55 @@ table 50380 "KOB_Combine_Credit_Consign"
 
     fields
     {
-        field(1; KOB_No; TEXT[50])
+        field(50380; KOB_No; TEXT[50])
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'No.';
         }
-        field(2; KOB_Customer_No; TEXT[50])
+        field(50381; KOB_Customer_No; TEXT[50])
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'Customer No.';
         }
-        field(3; KOB_Customer_Name; TEXT[100])
+        field(50382; KOB_Customer_Name; TEXT[100])
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'Customer Name';
         }
-        field(4; KOB_Order_No; TEXT[50])
+        field(50383; KOB_Order_No; TEXT[50])
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'Order No.';
         }
-        field(5; KOB_Document_Date; Date)
+        field(50384; KOB_Document_Date; Date)
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'Document Date';
         }
-        field(6; KOB_Due_Date; Date)
+        field(50385; KOB_Due_Date; Date)
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'Due Date';
         }
-        field(7; KOB_Amount; Decimal)
+        field(50386; KOB_Amount; Decimal)
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'Amount';
         }
-        field(8; KOB_Amount_VAT; Decimal)
+        field(50387; KOB_Amount_VAT; Decimal)
         {
             DataClassification = ToBeClassified;
             Editable = false;
             Caption = 'Amount Including VAT';
         }
-        field(9; KOB_Remaining_Amount; Decimal)
+        field(50388; KOB_Remaining_Amount; Decimal)
         {
             DataClassification = ToBeClassified;
             Editable = false;
