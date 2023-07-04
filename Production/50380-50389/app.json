@@ -2,7 +2,7 @@
   "id": "03fa1e09-6c2e-4ccc-aee4-5f02fbafe38b",
   "name": "KOB_Customization",
   "publisher": "KOB_DEV",
-  "version": "1.0.1.0",
+  "version": "1.0.1.2",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -27,7 +27,7 @@
       "id" : "56be9f8a-edb8-4269-8345-ac26d4eba59b",
       "name" : "Ubiz Function for Manufacturing",
       "publisher" : "Ubiz Solution Co., Ltd.",
-      "version" : "1.0.1.67"
+      "version" : "1.0.1.52"
     },
     {
       "id" : "f10cd1be-10b9-4fe1-89d5-bb8d3cc96ab2",

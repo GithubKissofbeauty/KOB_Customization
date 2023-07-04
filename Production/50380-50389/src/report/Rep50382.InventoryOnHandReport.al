@@ -165,6 +165,7 @@ report 50382 "KOB_Inventory On Hand Report"
                             EntryNo += 1;
                             TmpItemLedgEntry.INIT;
                             TmpItemLedgEntry."Item No." := ItemLedgEntry."Item No.";
+                            TmpItemLedgEntry."Expiration Date" := ItemLedgEntry."Expiration Date";
                             TmpItemLedgEntry."Location Code" := ItemLedgEntry."Location Code";
                             TmpItemLedgEntry."Lot No." := ItemLedgEntry."Lot No.";
                             TmpItemLedgEntry."Entry No." := EntryNo;
@@ -211,7 +212,6 @@ report 50382 "KOB_Inventory On Hand Report"
                             EntryNo += 1;
                             TmpItemLedgEntry.INIT;
                             TmpItemLedgEntry."Item No." := WHEntry."Item No.";
-                            TmpItemLedgEntry."Expiration Date" := ItemLedgEntry."Expiration Date";
                             TmpItemLedgEntry."Location Code" := WHEntry."Location Code";
                             TmpItemLedgEntry."Lot No." := WHEntry."Lot No.";
                             TmpItemLedgEntry.Bin := WHEntry."Bin Code";
