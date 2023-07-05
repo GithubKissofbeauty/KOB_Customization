@@ -48,6 +48,10 @@ page 50380 "KOB_Combine_Credit_Consign"
                 {
                     ApplicationArea = All;
                 }
+                field(KOB_Sales_Person; Rec.KOB_Sales_Person)
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

@@ -58,6 +58,12 @@ table 50380 "KOB_Combine_Credit_Consign"
             Editable = false;
             Caption = 'Remaining Amount';
         }
+        field(50389; KOB_Sales_Person; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Editable = false;
+            Caption = 'Sales Person';
+        }
     }
 
     procedure CombineData()
@@ -83,6 +89,7 @@ table 50380 "KOB_Combine_Credit_Consign"
                     CombineTable.KOB_Amount := SalesInvoice.Amount;
                     CombineTable.KOB_Amount_VAT := SalesInvoice."Amount Including VAT";
                     CombineTable.KOB_Remaining_Amount := SalesInvoice."Remaining Amount";
+                    CombineTable.KOB_Sales_Person := SalesInvoice."Salesperson Code";
                     CombineTable.INSERT;
                 end;
             until SalesInvoice.NEXT = 0;
@@ -104,6 +111,7 @@ table 50380 "KOB_Combine_Credit_Consign"
                     CombineTable.KOB_Amount := SalesMemo."Amount";
                     CombineTable.KOB_Amount_VAT := SalesMemo."Amount Including VAT";
                     CombineTable.KOB_Remaining_Amount := SalesMemo."Remaining Amount";
+                    CombineTable.KOB_Sales_Person := SalesMemo."Salesperson Code";
                     CombineTable.INSERT;
                 end;
             until SalesMemo.NEXT = 0; // Use PurchaseHeader instead of ItemLedgerEntry
@@ -125,6 +133,7 @@ table 50380 "KOB_Combine_Credit_Consign"
                     CombineTable.KOB_Amount := SalesConsign.UBC_Amount;
                     CombineTable.KOB_Amount_VAT := SalesConsign."UBC_Amount Including VAT";
                     CombineTable.KOB_Remaining_Amount := SalesConsign."UBC_Remaining Amount";
+                    CombineTable.KOB_Sales_Person := SalesConsign."UBC_Salesperson Code";
                     CombineTable.INSERT;
                 end;
             until SalesConsign.NEXT = 0; // Use PurchaseHeader instead of ItemLedgerEntry
