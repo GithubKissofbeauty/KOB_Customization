@@ -70,22 +70,27 @@ tableextension 50385 "KOB_Posted_Sales_Invoices" extends "Sales Invoice Line"
         field(50396; KOB_Product_Dim; Code[20])
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Dimension Set Entry"."Dimension Value Code" WHERE("Dimension Code" = CONST('PRODUCTTYPE'), "Dimension Set ID" = field("Dimension Set ID")));
+            CalcFormula = Lookup("Default Dimension"."Dimension Value Code" WHERE("Dimension Code" = CONST('PRODUCTTYPE'), "No." = field("KOB_SO_No.")));
         }
         field(50397; KOB_Channel_Dim; Code[20])
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Dimension Set Entry"."Dimension Value Code" WHERE("Dimension Code" = CONST('CHANNEL'), "Dimension Set ID" = field("Dimension Set ID")));
+            CalcFormula = Lookup("Default Dimension"."Dimension Value Code" WHERE("Dimension Code" = CONST('CHANNEL'), "No." = field("KOB_SO_No.")));
         }
         field(50398; KOB_Department_Dim; Code[20])
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Dimension Set Entry"."Dimension Value Code" WHERE("Dimension Code" = CONST('DEPARTMENT'), "Dimension Set ID" = field("Dimension Set ID")));
+            CalcFormula = Lookup("Default Dimension"."Dimension Value Code" WHERE("Dimension Code" = CONST('DEPARTMENT'), "No." = field("KOB_SO_No.")));
         }
-        field(50399; KOB_Salesperson_Dim; Code[20])
+        field(50399; KOB_SO_Dim_Set; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Dimension Set Entry"."Dimension Value Code" WHERE("Dimension Code" = CONST('SALESPERSON'), "Dimension Set ID" = field("Dimension Set ID")));
+            CalcFormula = Lookup("Sales Line"."Dimension Set ID" WHERE("Document No." = field("Order No."), "No." = field("No.")));
+        }
+        field(50400; KOB_Salesperson_Dim; Code[20])
+        {
+            FieldClass = FlowField;
+            CalcFormula = Lookup("Dimension Set Entry"."Dimension Value Code" WHERE("Dimension Code" = CONST('SALESPERSON'), "Dimension Set ID" = field("KOB_SO_Dim_Set")));
         }
     }
 }
