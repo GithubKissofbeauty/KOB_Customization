@@ -18,125 +18,125 @@ page 50381 "KOB_Sales Per Line"
         {
             repeater(Control1)
             {
-                field("KOB_Document No."; Rec."KOB_SO_Document No.")
+                field(KOB_Sales_Order; Rec."KOB_SO_Document No.")
                 {
                     ApplicationArea = All;
-                    Caption = 'PR No';
+                    Caption = 'Sales Order';
                 }
-                field(KOB_No; Rec."KOB_SO_Posting Date")
+                field("KOB_SO Date"; Rec."KOB_SO_Posting Date")
                 {
                     ApplicationArea = All;
-                    Caption = 'PR Item Code';
+                    Caption = 'SO Date';
                 }
-                field(KOB_Description; Rec."KOB_SO_Bill-to Customer No.")
+                field("KOB_SO Customer Code"; Rec."KOB_SO_Bill-to Customer No.")
                 {
                     ApplicationArea = All;
-                    Caption = 'PR Item Name';
+                    Caption = 'SO Customer Code';
                 }
-                field(KOB_Quantity; Rec."KOB_SO_Bill-to Name")
+                field("KOB_SO Customer Name"; Rec."KOB_SO_Bill-to Name")
                 {
                     ApplicationArea = All;
-                    Caption = 'PR Item Quantity';
+                    Caption = 'SO Customer Name';
                 }
-                field(KOB_PO_Line_Ref; Rec."KOB_SO_No.")
+                field("KOB_SO Item Code"; Rec."KOB_SO_No.")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO No';
+                    Caption = 'SO Item Code';
                 }
-                field(KOB_PO_Vendor_Code; Rec.KOB_SO_Description)
+                field("KOB_SO Item Name"; Rec.KOB_SO_Description)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Vendor Code';
+                    Caption = 'SO Item Name';
                 }
-                field(KOB_PO_Vendor_Name; Rec.KOB_SO_Quantity)
+                field("KOB_SO Quantity"; Rec.KOB_SO_Quantity)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Vendor Name';
+                    Caption = 'SO Quantity';
                 }
-                field(KOB_PO_Line_Qty; Rec."KOB_SO_Unit Price")
+                field("KOB_SO Unit Price"; Rec."KOB_SO_Unit Price")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quanity';
+                    Caption = 'SO Unit Price';
                 }
-                field(KOB_Unit_Cost; Rec."KOB_SO_Qty. to Ship")
+                field("KOB_SO Qty to Ship"; Rec."KOB_SO_Qty. to Ship")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Unit Cost';
+                    Caption = 'SO Qty to Ship';
                 }
-                field(KOB_PO_Quantity_to_Receive; Rec."KOB_SO_Quantity Shipped")
+                field("KOB_SO Qty Shipped"; Rec."KOB_SO_Quantity Shipped")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO QTY to Receive';
+                    Caption = 'SO Qty Shipped';
                 }
-                field(KOB_Quantity_Received; Rec."KOB_SO_Qty. to Invoice")
+                field("KOB_SO Qty to Invoice"; Rec."KOB_SO_Qty. to Invoice")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Received';
+                    Caption = 'SO Qty to Invoice';
                 }
-                field(KOB_PO_QTY_to_Invoice; Rec."KOB_SO_Quantity Invoiced")
+                field("KOB_SO Qty Invoiced"; Rec."KOB_SO_Quantity Invoiced")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO QTY to Invoice';
+                    Caption = 'SO Qty Invoiced';
                 }
-                field(KOB_PO_Quantity_Invoiced1; Rec."Document No.")
+                field("KOB_SI No."; Rec."Document No.")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'SI No.';
                 }
-                field(KOB_PO_Quantity_Invoiced2; Rec."Posting Date")
+                field("KOB_SI Posting Date"; Rec."Posting Date")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'SI Posting Date';
                 }
-                field(KOB_PO_Quantity_Invoiced3; Rec.Quantity)
+                field("KOB_SI Quantity"; Rec.Quantity)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'SI Quantity';
                 }
-                field(KOB_PO_Quantity_Invoiced4; Rec.KOB_Invoice_Qty_Per_SO)
+                field("KOB_SI Sum Quantity"; Rec.KOB_Invoice_Qty_Per_SO)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'SI Sum Quantity';
                 }
-                field(KOB_PO_Quantity_Invoiced5; Rec."Unit Price")
+                field("KOB_SI Unit Price"; Rec."Unit Price")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'SI Unit Price';
                 }
-                field(KOB_PO_Quantity_Invoiced6; Rec."Line Amount")
+                field("KOB_PSI Total Excl.Vat"; Rec."Line Amount")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'SI Total Excl.Vat';
                 }
-                field(KOB_PO_Quantity_Invoiced7; Rec."Shortcut Dimension 1 Code")
+                field("KOB_Item Category Code"; Rec."Shortcut Dimension 1 Code")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'Item Category Code';
                 }
-                field(KOB_PO_Quantity_Invoiced8; Rec."Shortcut Dimension 2 Code")
+                field("KOB_Brand Code"; Rec."Shortcut Dimension 2 Code")
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'Brand Code';
                 }
-                field(KOB_PO_Quantity_Invoiced9; Rec.KOB_Product_Dim)
+                field("KOB_Product Type Code"; Rec.KOB_Product_Dim)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'Product Type Code';
                 }
-                field(KOB_PO_Quantity_Invoiced10; Rec.KOB_Channel_Dim)
+                field("KOB_Channel Code"; Rec.KOB_Channel_Dim)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'Channel Code';
                 }
-                field(KOB_PO_Quantity_Invoiced11; Rec.KOB_Department_Dim)
+                field("KOB_Department Code"; Rec.KOB_Department_Dim)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'Department Code';
                 }
-                field(KOB_PO_Quantity_Invoiced12; Rec.KOB_Salesperson_Dim)
+                field("KOB_Salesperson Code"; Rec.KOB_Salesperson_Dim)
                 {
                     ApplicationArea = All;
-                    Caption = 'PO Quantity Invoiced';
+                    Caption = 'Salesperson Code';
                 }
             }
         }
