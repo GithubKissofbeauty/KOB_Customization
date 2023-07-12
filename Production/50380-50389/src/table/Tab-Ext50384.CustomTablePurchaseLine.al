@@ -15,42 +15,42 @@ tableextension 50384 "KOB_Custom_Table_Purchase Line" extends "Purchase Line"
         field(50386; KOB_PO_Vendor_Code; CODE[100])
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line"."UBL_Vendor No." WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line"."UBL_Vendor No." WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
         field(50387; KOB_PO_Vendor_Name; CODE[100])
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line"."UBL_Vendor Name" WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line"."UBL_Vendor Name" WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
         field(50388; KOB_PO_Quantity; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line".Quantity WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line".Quantity WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
         field(50389; KOB_PO_Unit_Cost; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line"."Unit Cost" WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line"."Unit Cost" WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
         field(50390; KOB_PO_Quantity_to_Receive; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line"."Qty. to Receive" WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line"."Qty. to Receive" WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
         field(50391; KOB_PO_Quantity_Received; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line"."Quantity Received" WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line"."Quantity Received" WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
         field(50392; KOB_PO_Quantity_to_Invoice; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line"."Qty. to Invoice" WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line"."Qty. to Invoice" WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
         field(50393; KOB_PO_Quantity_Invoiced; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup("Purchase Line"."Quantity Invoiced" WHERE("Document No." = field("KOB_PO_Line_Ref")));
+            CalcFormula = Lookup("Purchase Line"."Quantity Invoiced" WHERE("UBL_Create From PR/PQ No." = field("Document No."), "No." = field("No.")));
         }
     }
     trigger OnAfterDelete()
